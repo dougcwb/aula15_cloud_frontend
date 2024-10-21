@@ -4,42 +4,7 @@
     <meta charset="UTF-8">
     <title>Sorteio Automático</title>
     <!-- Estilização da página -->
-    <style>
-    h1 {
-        color: #FFFFFF;
-        font-family: system-ui;
-        margin-left: 20px;
-    }
-    body {
-        background-color: #003366;
-    }
-    label {
-        color: #66CCFF;
-        font-family: system-ui;
-        font-size: 20px;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-    button {
-        background-color: #66CCFF;
-        border-color: #66CCFF;
-        color: #FFFFFF;
-        font-family: system-ui;
-        font-size: 20px;
-        font-weight: bold;
-        margin-left: 30px;
-        margin-top: 20px;
-        width: 140px;
-    }
-    input {
-        color: #003366;
-        font-family: system-ui;
-        font-size: 20px;
-        margin-left: 10px;
-        margin-top: 20px;
-        width: 100px;
-    }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script>
         // Função para chamar a API
         var realizarSorteio = (nomeSorteio, numMin, numMax) => {
@@ -59,9 +24,9 @@
                 redirect: 'follow'
             };
 
-            fetch("https://5bciix4nk2.execute-api.us-east-2.amazonaws.com/devc", requestOptions)
+            fetch("https://ampeby30xh.execute-api.us-east-1.amazonaws.com/prod/", requestOptions)
             .then(response => response.text())
-            .then(result => alert("Número sorteado: " + JSON.parse(result).numeroSorteado))
+            .then(result => alert("Número sorteado: " + JSON.parse(JSON.parse(result).body).numeroSorteado))
             .catch(error => console.log('error', error));
         }
     </script>
