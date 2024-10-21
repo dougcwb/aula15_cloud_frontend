@@ -12,7 +12,7 @@ gh repo create sorteioAWS --public --clone
 Modifique ou crie o arquivo `index.html` no repositório.
 
 ## 2. Configurar o AWS Amplify
-Adicione o repositório Git criado no AWS Amplify para automação do deploy.
+Adicione o repositório Git no AWS Amplify para automação do deploy.
 
 Visite o endereço da aplicação que tem o HTML: `https://master.<abcdefg>.amplifyapp.com/`
 
@@ -51,4 +51,6 @@ Acesse a seção de permissões da Lambda e adicione uma nova política de segur
 - Crie uma REST API no API Gateway.
 Configure um método POST e selecione a opção "Método Lambda", vinculando a Lambda Function criada.
 - Habilite o CORS para permitir requisições de qualquer origem.
-- Faça o deploy da API.
+- Faça o deploy da API
+
+Visite o endereço da sua aplicação para ver o resultado `https://master.<abcdefg>.amplifyapp.com/`
